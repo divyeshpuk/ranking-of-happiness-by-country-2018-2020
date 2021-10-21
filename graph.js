@@ -100,12 +100,12 @@ function graph(table) {
     
     function getFilteredRows() {
         let selectedKeysIndexes = getselectedKeysIndexes();
-        let searchText = userFilters.search.currentValue;
+        let searchText = userFilters.search.currentValue.replace(/\s/g, '').toLowerCase();
         let filteredRows = [];
         
         for (let row of rows) {
             let rowScore = sumSelectedItems(row.scores, selectedKeysIndexes);
-            let rowText = row.text.toLowerCase();
+            let rowText = row.text.replace(/\s/g, '').toLowerCase();
             
             if (((rowText).indexOf(searchText) > -1 || !searchText) &&
                userFilters.legendKeys.checked.indexOf(true) > -1 &&
