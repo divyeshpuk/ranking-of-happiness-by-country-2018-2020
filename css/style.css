@@ -1,0 +1,111 @@
+/* variables */
+:root {
+    --buffer: 10px;
+    --canvasWidth: 1185px;
+    --graphicWidth: 1120px;
+    --textBoxPadding: 0.5em 0.75em;
+    --header: 55px;
+    --subBarHeight: 16.2px;
+    --gray96: rgb(96, 96, 96);
+    --gray240: rgb(240, 240, 240);
+    --slateBlue: rgb(60, 80, 215);
+    --teal: rgb(0, 128, 128);
+    --yellowGreen: rgb(154, 205, 50);
+    --orange: rgb(255, 165, 0);
+    --darkRed: rgb(159, 0, 0);
+    --crimson: rgb(220, 20, 60);
+    --orchid: rgb(218, 102, 244)
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    color: var(--gray96);
+}
+
+h1 {
+    margin: 0;
+}
+
+canvas {
+    background-color: var(--gray240);
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+}
+
+#content {
+    position: absolute;
+    top: var(--header);
+    height: calc(100vh - var(--buffer) - var(--header));
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#user-message {
+    position: absolute;
+    width: calc(var(--graphicWidth) + var(--buffer));
+    top: var(--buffer);
+    left: var(--buffer);
+    padding: var(--textBoxPadding);
+    background-color: #FFF;
+}
+
+.user-filters {
+    margin: var(--buffer) 0 0 calc(var(--canvasWidth) + var(--buffer));
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+button[type="button"] {
+    padding: var(--textBoxPadding);
+    margin-left: -1px;
+}
+
+#search-input {
+    width: 200px;
+    padding: var(--textBoxPadding);
+}
+
+#legend {
+    margin-bottom: 1em;
+}
+
+.legend-key-color, .legend-key-checkbox {
+    display: inline-block;
+    width: var(--subBarHeight);
+    height: var(--subBarHeight);
+}
+
+.slate-blue {
+    background-color: var(--slateBlue);
+}
+
+.teal {
+    background-color: var(--teal);
+}
+
+.yellow-green {
+    background-color: var(--yellowGreen);
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.dark-red {
+    background-color: var(--darkRed);
+}
+
+.crimson {
+    background-color: var(--crimson);
+}
+
+.orchid {
+    background-color: var(--orchid);
+}
